@@ -1,14 +1,16 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #efeeea;
+  --foreground: #212529;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
