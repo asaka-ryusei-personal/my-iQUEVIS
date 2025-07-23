@@ -1,9 +1,13 @@
+/* ヘッダーの背景 */
 .navbar {
   padding-left: 3rem;
   padding-right: 3rem;
-  z-index: 1000; /* スクロール時に前面表示 */
-  backdrop-filter: blur(5px); /* 背景ぼかし（おしゃれ）*/
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: visible; /* ヘッダーの範囲外でも図形が表示される */
 }
+
 
 .container {
   display: flex;
@@ -32,6 +36,8 @@
 }
 
 .welcome {
+  position: relative;
+  z-index: 1; /* 楕円より前面に表示 */
   font-size: 1rem;
   white-space: nowrap;
 }
@@ -41,4 +47,32 @@
   color: white;
   border-color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Header.module.css */
+
+/* 楕円形（右上の配置） */
+.ellipse {
+  position: absolute;
+  right: 10vw; /* 右端から少し離した位置 */
+  top: 50%; /* ヘッダーの中央に配置 */
+  transform: translateY(-50%); /* 垂直方向に中央寄せ */
+  width: 80vw; /* 画面幅の80% */
+  height: 30vw; /* 画面幅の30% */
+  background-color: lightblue;
+  border-radius: 50%; /* 楕円にする */
+  z-index: -1; /* 文字よりも背面に配置 */
+}
+
+/* 左下に楕円を配置 */
+.leftEllipse {
+  position: absolute;
+  bottom: -25vh; /* 画面高さの10% */
+  left: -15vw;   /* 画面幅の5% */
+  width: 50vw;  /* 画面幅に対する割合でサイズ調整 */
+  height: 75vh; /* 画面高さに対する割合でサイズ調整 */
+  background-color: lightblue;
+  border-radius: 50%; /* 楕円形にする */
+  z-index: -1; /* 他の要素より背面に配置 */
+  transform: rotate(-45deg); /* 少し傾ける */
 }

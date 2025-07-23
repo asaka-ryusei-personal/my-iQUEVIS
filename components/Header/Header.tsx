@@ -1,32 +1,29 @@
-"use client";
+import React from 'react';
+import { Navbar, Container } from 'react-bootstrap';
+import styles from './Header.module.css';
 
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import styles from "./Header.module.css";
-
-export default function Header() {
+const Header: React.FC = () => {
   return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      className={`${styles.navbar} bg-transparent`}
-    >
-      <Container fluid className={styles.container}>
-        <Navbar.Brand href="/" className={styles.brand}>
-          <span className={styles.italicI}>i</span>QUEVIS
-        </Navbar.Brand>
-        <Nav className={styles.rightSection}>
-          <Navbar.Text className={styles.welcome}>
-            ようこそ <strong>li0000 剛田武</strong> さん
-          </Navbar.Text>
-          <Button
-            variant="outline-light"
-            size="sm"
-            className={styles.logoutButton}
-          >
-            ログアウト
-          </Button>
-        </Nav>
-      </Container>
-    </Navbar>
+    <>
+      <Navbar style={{ position: 'relative' }} className="p-3" bg="transparent">
+        <Container className="d-flex justify-content-between align-items-center">
+          {/* 左側のヘッダータイトル */}
+          <Navbar.Brand style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+            i<span className={styles.italicI}>QUEVIS</span>
+          </Navbar.Brand>
+
+          {/* 右側のユーザー情報と楕円 */}
+          <div style={{ position: 'relative' }}>
+            <div className={styles.ellipse}></div>
+            <span className={styles.welcome}>ようこそ li4646 剛田武 さん</span>
+          </div>
+        </Container>
+      </Navbar>
+
+      {/* 左下の楕円 */}
+      <div className={styles.leftEllipse}></div>
+    </>
   );
-}
+};
+
+export default Header;
