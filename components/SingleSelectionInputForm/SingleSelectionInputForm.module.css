@@ -9,18 +9,3 @@
 .isRequired {
   color: red;
 }
-
-/* 入力フォーム */
-:global(.form-check-input) {
-  border-color: #76abae;
-}
-
-:global(.form-check-input:focus) {
-  border-color: #76abae;
-  box-shadow: 0 0 0 0.1rem #76abae;
-}
-
-:global(.form-check-input:checked) {
-  background-color: #76abae;
-  border-color: #76abae;
-}

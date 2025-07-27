@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: "/my-iQUEVIS",
+  assetPrefix: "/my-iQUEVIS/",
 };
 
 export default nextConfig;
