@@ -1,0 +1,21 @@
+/* パンくずリスト全体 */
+.breadcrumbs {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 区切り文字を変更する */
+ul.breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
+  content: " > ";
+  color: #eeeeee;
+}
+
+ul.breadcrumbs .breadcrumb-item,
+ul.breadcrumbs .breadcrumb-item a {
+  color: #76abae !important;
+}
+
+ul.breadcrumbs .breadcrumb-item.active,
+ul.breadcrumbs .breadcrumb-item.active a {
+  color: #eeeeee !important;
+}
