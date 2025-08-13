@@ -1,3 +1,6 @@
+# ====================================
+# 既存の Next.js 用設定
+# ====================================
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -39,3 +42,30 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ====================================
+# Backend (Java / Gradle)
+# ====================================
+backend/.gradle/
+backend/build/
+backend/out/
+.gradle/
+build/
+
+# ====================================
+# Database
+# ====================================
+db/data/
+
+# ====================================
+# Docker
+# ====================================
+*.pid
+*.seed
+docker-compose.override.yml
+
+# ====================================
+# IDE / Editor settings
+# ====================================
+.vscode/
+.idea/
