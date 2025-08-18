@@ -69,3 +69,4 @@ docker-compose.override.yml
 # ====================================
 .vscode/
 .idea/
+/bin/
